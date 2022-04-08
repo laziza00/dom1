@@ -15,7 +15,6 @@ let elSpecial = document.querySelector('.special')
 let elNumber = document.querySelector('.number')
 let elLength = document.querySelector('.length')
 
-console.log(elUpper)
 
 eyeBtn.addEventListener('click', ()=> {
     eyeIcon.classList.toggle('bx-bullseye');
@@ -29,7 +28,6 @@ eyeBtn.addEventListener('click', ()=> {
 
 input.addEventListener('keyup', (inputValue)=> {
     let text = inputValue.target.value.trim()
-    console.log(text)
 
     if(text.match(/[A-Z]/) !=null ) {
         text1.classList.add('white-color');
@@ -45,7 +43,6 @@ input.addEventListener('keyup', (inputValue)=> {
         text2.classList.add('white-color');
         elNumber.className = 'bx bx-check'
         elNumber.style.color ="#fff"
-   
     }
     else {
         text2.classList.remove('white-color')
