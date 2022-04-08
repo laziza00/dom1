@@ -5,6 +5,10 @@ let box__inner = document.querySelector('.box__inner')
 let clock = document.querySelector('.bxs-lock-alt')
 let box__main = document.querySelector('.box__main')
 let text1 = document.querySelector('.text1')
+let text2 = document.querySelector('.text2')
+let text3 = document.querySelector('.text3')
+let text4 = document.querySelector('.text4')
+let removeIcon = document.querySelector('.remove')
 
 eyeBtn.addEventListener('click', ()=> {
     eyeIcon.classList.toggle('bx-bullseye');
@@ -17,24 +21,48 @@ eyeBtn.addEventListener('click', ()=> {
 
 
 input.addEventListener('keyup', (inputValue)=> {
-    let text = inputValue.target.value.toLowerCase()
-    filterInput(text)
+    let text = inputValue.target.value.trim()
+    console.log(text)
+
+    if(text.match(/[A-Z]/) !=null ) {
+        text1.classList.add('white-color');
+        removeIcon.classList.add('.bx-check')
+    }
+    else {
+        text1.classList.remove('white-color')
+    }
+    if(text.match(/[0-9]/) !=null ) {
+        text2.classList.add('white-color');
+        removeIcon.classList.add('.bx-check')
+    }
+    else {
+        text2.classList.remove('white-color')
+    }
+    if(text.match(/[!@#$%^&*]/) !=null ) {
+        text3.classList.add('white-color');
+        removeIcon.classList.add('.bx-check')
+    }
+    else {
+        text3.classList.remove('white-color')
+    }
+    if(text.length>= 8) {
+        text4.classList.add('white-color');
+        removeIcon.classList.add('.bx-check')
+    }
+    else {
+        text4.classList.remove('white-color')
+    }
+
 })
+
 input.addEventListener('click', ()=> {
     box__inner.classList.toggle('white')
     input.classList.toggle('white');
     clock.classList.toggle('gray');
-    box__main.classList.add('d-block')
+    box__main.classList.toggle('d-block')
 })
-arr = ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'k', 'r', 's', 't', 'u', 'v','w', 'x', 'y','z' ]
-function filterInput(itemText) {
-    let ftext = itemText.trim()
 
 
-    //    if(ftext.includes(arr).toUpperCase) {
-    //        text1.classList.add('white-color')
-    //    }
-}
 
 
 
