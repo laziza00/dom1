@@ -86,8 +86,6 @@ input.addEventListener('click', ()=> {
 
 
 
-
-
 //========= boil js ==========
 
 let boilBtn = document.querySelector('.boil__btn');
