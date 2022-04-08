@@ -35,3 +35,43 @@ function filterInput(itemText) {
     //        text1.classList.add('white-color')
     //    }
 }
+
+
+
+
+
+
+
+
+
+
+//========= boil js ==========
+
+let boilBtn = document.querySelector('.boil__btn');
+let inputBoil = document.querySelector('.input__boil')
+let boilBox = document.querySelector('.boil__box');
+
+boilBtn.addEventListener('click', BoilWork)
+
+function BoilWork (e) {
+    if(inputBoil != "") {
+        let button = document.createElement('button');
+        button.className = 'boil__btn-one ';
+        button.append(document.createTextNode(inputBoil.value))
+        boilBox.appendChild(button);
+
+        let fvalue = inputBoil.value;
+
+        setInterval(() =>{
+            setTimeout(()=> {
+                fvalue --;
+                button.textContent = fvalue;
+                if(fvalue ===0) {
+                    button.style.display = "none"
+                }
+            })
+        }, 1000);
+        inputBoil.value = ""
+
+    }
+}

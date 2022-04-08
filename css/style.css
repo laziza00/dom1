@@ -26,24 +26,16 @@ body {
   width: 400px;
   border-radius: 5px;
   background-color: rgb(30, 29, 43);
+  transition: all 0.3s ease;
 }
-/* .box__inner::before {
-  position: absolute;
-  top: 70px;
-  right: 500px;
-  padding:10px  20px;
-  width: 400px;
-  height: 72px;
-  border-radius: 5px;
-  background-color: #fff ;
-  z-index: 1000;
-} */
+
 .box__main {
   margin: 20px 0 0 0;
   width: 400px;
   background-color: rgb(30, 29, 43);
   border-radius: 5px;
   padding: 20px;
+  transition: all 0.3s ease;
 }
 .box__text {
   font-size: 18px;
@@ -52,6 +44,7 @@ body {
   align-items: center;
   margin: 10px 0;
   font-weight: 600;
+  transition: all 0.3s ease;
 
 }
 .box__text i{
@@ -68,6 +61,7 @@ body {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .eye {
   border-radius: 50%;
@@ -83,6 +77,7 @@ body {
   font-size: 19px;
   font-weight: 600;
   width: 80%;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .white {
@@ -90,9 +85,11 @@ body {
 }
 .dark {
   background-color: rgb(30, 29, 43);
+  transition: all 0.3s ease;
 }
 .gray {
   color: rgb(30, 29, 43);
+  transition: all 0.3s ease;
 }
 .white-color {
   color: #fff;
@@ -104,3 +101,56 @@ body {
   display: block;
 }
 
+
+
+
+
+
+/* =======boil======== */
+
+.boil {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+.input__boil {
+  padding: 8px 15px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: rgb(112, 109, 109);
+  width: 80%;
+}
+.input__boil::placeholder {
+  color: rgb(112, 109, 109);
+}
+.boil__btn {
+  background-color: rgb(30, 29, 43);
+  border: 1px solid  rgb(30, 29, 43);;
+  color: #fff;
+  padding: 8px 8px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.boil__btn:hover {
+  background-color: #fff;
+  color: rgb(30, 29, 43);
+  transition: all 0.3s ease; 
+  border: 1px solid rgb(30, 29, 43);
+}
+.boil__btn-one {
+  border-radius: 50%;
+  background-color: rgb(218, 135, 79);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 0 10px ;
+}
