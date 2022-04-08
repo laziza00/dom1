@@ -6,13 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="css/col.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+<div class="container">
+  <div class="box" >
+    <div class="box__inner" style="display: flex; align-items: center;">
+      <form class="box__input">
+        <button class="btn clock">
+          <i class='bx bxs-lock-alt'></i>
+        </button>
+        <input type="text" class="box__input-inner input" placeholder="Password">
+      </form>
+      <button class="btn eye">
+        <i class='bx bx-bullseye'></i>
+        </button>
+    </div>
+<div class="box__main d-none">
+  <p class="box__text text1">
+   <i class='bx bx-x' ></i>Upper Case
+  </p>
+  <p class="box__text">
+   <i class='bx bx-x' ></i> Special characters
+  </p>
+  <p class="box__text">
+   <i class='bx bx-x' ></i>Number
+  </p>
+  <p class="box__text">
+   <i class='bx bx-x' ></i> More than 8 characters
+  </p>
+</div>
+  </div>
+</div>
   <script src="js/main.js"></script>
 </body>
 
