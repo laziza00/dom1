@@ -8,7 +8,14 @@ let text1 = document.querySelector('.text1')
 let text2 = document.querySelector('.text2')
 let text3 = document.querySelector('.text3')
 let text4 = document.querySelector('.text4')
-let removeIcon = document.querySelector('.remove')
+
+// iconlar
+let elUpper = document.querySelector('.upper')
+let elSpecial = document.querySelector('.special')
+let elNumber = document.querySelector('.number')
+let elLength = document.querySelector('.length')
+
+console.log(elUpper)
 
 eyeBtn.addEventListener('click', ()=> {
     eyeIcon.classList.toggle('bx-bullseye');
@@ -26,31 +33,46 @@ input.addEventListener('keyup', (inputValue)=> {
 
     if(text.match(/[A-Z]/) !=null ) {
         text1.classList.add('white-color');
-        removeIcon.classList.add('.bx-check')
+        elUpper.className = 'bx bx-check ' 
+        elUpper.style.color ="#fff"
     }
     else {
         text1.classList.remove('white-color')
+        elUpper.className = 'bx bx-x ' 
+        elUpper.style.color ="rgb(112, 109, 109)"
     }
     if(text.match(/[0-9]/) !=null ) {
         text2.classList.add('white-color');
-        removeIcon.classList.add('.bx-check')
+        elNumber.className = 'bx bx-check'
+        elNumber.style.color ="#fff"
+   
     }
     else {
         text2.classList.remove('white-color')
+        elNumber.className = 'bx bx-x'
+        elNumber.style.color ="rgb(112, 109, 109)"
     }
     if(text.match(/[!@#$%^&*]/) !=null ) {
         text3.classList.add('white-color');
-        removeIcon.classList.add('.bx-check')
+        elSpecial.className = 'bx bx-check'
+        elSpecial.style.color ="#fff"
+   
     }
     else {
         text3.classList.remove('white-color')
+        elSpecial.className = 'bx bx-x'
+        elSpecial.style.color ="rgb(112, 109, 109)"
     }
     if(text.length>= 8) {
         text4.classList.add('white-color');
-        removeIcon.classList.add('.bx-check')
+        elLength.className = 'bx bx-check'
+        elLength.style.color ="#fff"
+    
     }
     else {
         text4.classList.remove('white-color')
+        elLength.className = 'bx bx-x'
+        elLength.style.color ="rgb(112, 109, 109)"
     }
 
 })
@@ -61,10 +83,6 @@ input.addEventListener('click', ()=> {
     clock.classList.toggle('gray');
     box__main.classList.toggle('d-block')
 })
-
-
-
-
 
 
 
